@@ -22,7 +22,6 @@ async function setupNodeEvents(on, config) {
   );
 
   allureCypress(on, config);
-
   return config;
 }
 
@@ -33,6 +32,7 @@ module.exports = defineConfig({
     setupNodeEvents,
     viewportWidth: 1920,
     viewportHeight: 1080,
+    screenshotOnRunFailure: true,
     baseUrl: "https://www.saucedemo.com",
   },
 });
