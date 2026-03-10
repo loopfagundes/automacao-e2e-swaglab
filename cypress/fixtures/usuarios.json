@@ -1,0 +1,30 @@
+{
+  "valido": {
+    "usuario": "standard_user",
+    "senha": "secret_sauce"
+  },
+  "invalido": {
+    "usuario": "standard_user",
+    "senha": "secret_error"
+  },
+  "bloqueado": {
+    "usuario": "locked_out_user",
+    "senha": "secret_sauce"
+  },
+  "problematico": {
+    "usuario": "problem_user",
+    "senha": "secret_sauce"
+  },
+  "performance": {
+    "usuario": "performance_glitch_user",
+    "senha": "secret_sauce"
+  },
+  "error": {
+    "usuario": "error_user",
+    "senha": "secret_sauce"
+  },
+  "visual": {
+    "usuario": "visual_user",
+    "senha": "secret_sauce"
+  }
+}
