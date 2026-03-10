@@ -18,3 +18,11 @@ Then("devo visualizar a página de produtos", () => {
   cy.url().should("include", "/inventory.html");
   cy.get('[data-test="title"]').should("contain", "Products");
 });
+
+Then("devo visualizar mensagem de erro", () => {
+  cy.get('[data-test="error"]').should("be.visible");
+});
+
+Then("devo visualizar mensagem de usuário bloqueado", () => {
+  cy.get('[data-test="error"]').should("contain", "locked out");
+});
