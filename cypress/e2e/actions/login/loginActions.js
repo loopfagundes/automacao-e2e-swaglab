@@ -1,38 +1,32 @@
-
-import loginPage from "../../pages/login/loginPage";
-import inventoryPage from "../../pages/produtos/inventoryPage";
+import loginElements from "../../elements/login/loginElements";
+import inventoryElements from "../../elements/produtos/inventoryElements";
 
 class LoginActions {
-  acessarPaginaLogin() {
 
-    loginPage.acessarLogin();
+  acessarPaginaLogin() {
+    cy.visit("/");
   }
 
   preencherCredenciais(usuario, senha) {
-    loginPage.preencherUsuario(usuario);
-    loginPage.preencherSenha(senha);
+    loginElements.campoUsuario().clear().type(usuario);
+    loginElements.campoSenha().clear().type(senha);
   }
 
-  clicarEmLogin() {
-    loginPage.clicarBotaoLogin();
+  clicarLogin() {
+    loginElements.botaoLogin().click();
   }
 
   validarLoginComSucesso() {
-    inventoryPage.validarPaginaProdutos();
+    cy.url().should("include", "/inventory.html");
+    inventoryElements.validarOTitulo().should("contain", "Products");
   }
 
   validarErroLogin() {
-    loginPage.validarMensagemErro();
+    loginElements.mensagemErro().should("be.visible");
   }
 
   validarUsuarioBloqueado() {
-    loginPage.validarMensagemUsuarioBloqueado();
-  }
-
-  realizarLogin(usuario, senha) {
-    this.acessarPaginaLogin();
-    this.preencherCredenciais(usuario, senha);
-    this.clicarEmLogin();
+    loginElements.mensagemErro().should("contain", "locked out");
   }
 }
 
