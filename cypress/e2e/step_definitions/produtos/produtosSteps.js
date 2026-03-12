@@ -45,3 +45,11 @@ Then("clico no botão de adicionar ao carrinho para cada produto", () => {
 Then("devo visualizar todos os produtos adicionados no carrinho", () => {
     produtosActions.visualizarTodosProdutosAdicionadosNoCarrinho();
 });
+
+Then("clico no botão de remover todos os produtos do carrinho", () => {
+    produtosActions.clicarBotaoRemoverTodosProdutosDoCarrinho();
+});
+
+Then("o carrinho deve estar vazio", () => {
+    produtosActions.validarSeProdutoFoiRemovidoDoCarrinho();
+});

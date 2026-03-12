@@ -46,6 +46,12 @@ class ProdutosActions {
             produtosElements.visualizarProdutoNoCarrinhoLabel().should("contain", produto);
         });
     }
+
+    clicarBotaoRemoverTodosProdutosDoCarrinho() {
+        produtosElements.removerProdutoDoCarrinhoButton().each(($btn) => {
+            cy.wrap($btn).click();
+        });
+    }
 }
 
 export default new ProdutosActions();

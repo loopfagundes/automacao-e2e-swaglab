@@ -32,12 +32,12 @@ Funcionalidade: Produtos
         Quando clico no botão de adicionar ao carrinho para cada produto
         Então devo visualizar todos os produtos adicionados no carrinho
 
-    # Cenário: Remove todos os produtos do carrinho
-    #     Dado que estou na página de produtos
-    #     Quando clico no botão de adicionar ao carrinho para cada produto
-    #     E devo visualizar todos os produtos adicionados no carrinho
-    #     E clico no botão de remover todos os produtos
-    #     Então o carrinho deve estar vazio
+    Cenário: Remove todos os produtos do carrinho
+        Dado que estou na página de produtos
+        Quando clico no botão de adicionar ao carrinho para cada produto
+        E devo visualizar todos os produtos adicionados no carrinho
+        E clico no botão de remover todos os produtos do carrinho
+        Então o carrinho deve estar vazio
 
     # Cenário: Adiciona produto ao carrinho ate checkout
     #     Dado que estou na página de produtos
