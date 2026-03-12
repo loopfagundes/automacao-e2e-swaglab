@@ -8,7 +8,7 @@
     "cy:run": "cypress run",
     "allure:clean": "rimraf allure-results allure-report",
     "allure:open": "allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report",
-    "test:report": "rimraf allure-results allure-report && cypress run && allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
+    "allure:report": "rimraf allure-results allure-report && cypress run && allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
   },
   "keywords": [],
   "author": "",

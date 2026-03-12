@@ -1,5 +1,5 @@
 import loginElements from "../../elements/login/loginElements";
-import inventoryElements from "../../elements/produtos/inventoryElements";
+import produtosElements from "../../elements/produtos/produtosElements";
 
 class LoginActions {
 
@@ -18,7 +18,7 @@ class LoginActions {
 
   validarLoginComSucesso() {
     cy.url().should("include", "/inventory.html");
-    inventoryElements.validarOTitulo().should("contain", "Products");
+    produtosElements.validarOTitulo().should("contain", "Products");
   }
 
   validarErroLogin() {
