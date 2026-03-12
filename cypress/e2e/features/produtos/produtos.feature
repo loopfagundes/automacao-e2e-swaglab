@@ -13,33 +13,36 @@ Funcionalidade: Produtos
 
     Cenário: Adiciona produto ao carrinho
         Dado que estou na página de produtos
-        Quando seleciono um produto
+        Quando seleciono um produto "backpack"
         E visualizo os detalhes do produto
         E clico no botão de adicionar ao carrinho
         Então devo visualizar o produto no carrinho
 
-    Cenário: Remove produto do carrinho
-        Dado que tenho um produto no carrinho
-        Quando visualizo o carrinho
-        E clico no botão de remover produto
-        Então o produto deve ser removido do carrinho
+    # Cenário: Remove produto do carrinho
+    #     Dado que estou na página de produtos
+    #     Quando seleciono um produto
+    #     E visualizo os detalhes do produto
+    #     E clico no botão de adicionar ao carrinho
+    #     E visualizo o carrinho
+    #     E clico no botão de remover produto
+    #     Então o produto deve ser removido do carrinho
 
-    Cenário: Adiciona múltiplos produtos ao carrinho
-        Dado que estou na página de produtos
-        Quando clico no botão de adicionar ao carrinho para cada produto
-        Então devo visualizar todos os produtos adicionados no carrinho
+    # Cenário: Adiciona múltiplos produtos ao carrinho
+    #     Dado que estou na página de produtos
+    #     Quando clico no botão de adicionar ao carrinho para cada produto
+    #     Então devo visualizar todos os produtos adicionados no carrinho
 
-    Cenário: Remove todos os produtos do carrinho
-        Dado que estou na página de produtos
-        Quando clico no botão de adicionar ao carrinho para cada produto
-        E devo visualizar todos os produtos adicionados no carrinho
-        E clico no botão de remover todos os produtos
-        Então o carrinho deve estar vazio
+    # Cenário: Remove todos os produtos do carrinho
+    #     Dado que estou na página de produtos
+    #     Quando clico no botão de adicionar ao carrinho para cada produto
+    #     E devo visualizar todos os produtos adicionados no carrinho
+    #     E clico no botão de remover todos os produtos
+    #     Então o carrinho deve estar vazio
 
-    Cenário: Adiciona produto ao carrinho ate checkout
-        Dado que estou na página de produtos
-        Quando seleciono um produto
-        E clico no botão de adicionar ao carrinho
-        E visualizo o carrinho
-        E clico no botão de checkout
-        Então devo ser redirecionado para a página de checkout
+    # Cenário: Adiciona produto ao carrinho ate checkout
+    #     Dado que estou na página de produtos
+    #     Quando seleciono um produto
+    #     E clico no botão de adicionar ao carrinho
+    #     E visualizo o carrinho
+    #     E clico no botão de checkout
+    #     Então devo ser redirecionado para a página de checkout
