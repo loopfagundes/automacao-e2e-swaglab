@@ -29,3 +29,11 @@ Then("clico no botão de adicionar ao carrinho", () => {
 Then("devo visualizar o produto no carrinho", () => {
     produtosActions.visualizarCarrinho();
 });
+
+Then("clico no botão de remover produto", () => {
+    produtosActions.removerProdutoDoCarrinho();
+});
+
+Then("o produto deve ser removido do carrinho", () => {
+    produtosActions.validarSeProdutoFoiRemovidoDoCarrinho();
+});

@@ -26,6 +26,10 @@ class ProdutosElements {
   visualizarProdutoNoCarrinhoLabel() {
     return cy.get('[data-test="inventory-item"]');
   }
+
+  removerProdutoDoCarrinhoButton() { 
+    return cy.get('.btn.btn_secondary.btn_small.cart_button');
+  }
 }
 
 export default new ProdutosElements();

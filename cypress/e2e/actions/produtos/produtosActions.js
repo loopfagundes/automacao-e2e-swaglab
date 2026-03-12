@@ -25,6 +25,14 @@ class ProdutosActions {
         produtosElements.iconeCarrinhoButton().click();
         produtosElements.visualizarProdutoNoCarrinhoLabel().should("contain", "Sauce Labs Backpack");
     }
+
+    removerProdutoDoCarrinho() {
+        produtosElements.removerProdutoDoCarrinhoButton().click();
+    }
+
+    validarSeProdutoFoiRemovidoDoCarrinho() {
+        produtosElements.visualizarProdutoNoCarrinhoLabel().should("not.exist");
+    }
 }
 
 export default new ProdutosActions();
