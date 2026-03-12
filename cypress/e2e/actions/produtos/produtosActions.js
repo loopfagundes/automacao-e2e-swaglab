@@ -12,9 +12,9 @@ class ProdutosActions {
         produtosElements.nomeProdutoLabel().should("contain", nomeProduto);
     }
 
-    visualizarDetalhesProduto() { 
+    visualizarDetalhesProduto() {
         produtosElements.descricaoProdutoLabel().should("be.visible");
-        produtosElements.precoProdutoText().should("be.visible");    
+        produtosElements.precoProdutoText().should("be.visible");
     }
 
     adicionarProdutoAoCarrinho() {
@@ -40,9 +40,11 @@ class ProdutosActions {
     }
 
     visualizarTodosProdutosAdicionadosNoCarrinho() {
+        const produtos = ["Sauce Labs Backpack", "Sauce Labs Bike Light"];
         produtosElements.iconeCarrinhoButton().click();
-        produtosElements.visualizarAListaDeProdutosNoCarrinhoText().should("contain", "Sauce Labs Backpack");
-        produtosElements.visualizarAListaDeProdutosNoCarrinhoText().should("contain", "Sauce Labs Bike Light");
+        produtos.forEach((produto) => {
+            produtosElements.visualizarProdutoNoCarrinhoLabel().should("contain", produto);
+        });
     }
 }
 
