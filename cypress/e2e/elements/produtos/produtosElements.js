@@ -30,6 +30,18 @@ class ProdutosElements {
   removerProdutoDoCarrinhoButton() { 
     return cy.get('.btn.btn_secondary.btn_small.cart_button');
   }
+
+  adicionarProdutoBackpackAoCarrinhoButton() {
+    return cy.get('[data-test="add-to-cart-sauce-labs-backpack"]');
+  }
+
+  adicionarProdutoBikeLightAoCarrinhoButton() {
+    return cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]');
+  }
+
+  visualizarAListaDeProdutosNoCarrinhoText() {
+    return cy.get('[data-test="cart-list"]');
+  }
 }
 
 export default new ProdutosElements();

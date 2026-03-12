@@ -27,10 +27,10 @@ Funcionalidade: Produtos
         E clico no botão de remover produto
         Então o produto deve ser removido do carrinho
 
-    # Cenário: Adiciona múltiplos produtos ao carrinho
-    #     Dado que estou na página de produtos
-    #     Quando clico no botão de adicionar ao carrinho para cada produto
-    #     Então devo visualizar todos os produtos adicionados no carrinho
+    Cenário: Adiciona múltiplos produtos ao carrinho
+        Dado que estou na página de produtos
+        Quando clico no botão de adicionar ao carrinho para cada produto
+        Então devo visualizar todos os produtos adicionados no carrinho
 
     # Cenário: Remove todos os produtos do carrinho
     #     Dado que estou na página de produtos

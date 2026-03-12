@@ -33,6 +33,17 @@ class ProdutosActions {
     validarSeProdutoFoiRemovidoDoCarrinho() {
         produtosElements.visualizarProdutoNoCarrinhoLabel().should("not.exist");
     }
+
+    adicionaMultiplosProdutosAoCarrinho() {
+        produtosElements.adicionarProdutoBackpackAoCarrinhoButton().click();
+        produtosElements.adicionarProdutoBikeLightAoCarrinhoButton().click();
+    }
+
+    visualizarTodosProdutosAdicionadosNoCarrinho() {
+        produtosElements.iconeCarrinhoButton().click();
+        produtosElements.visualizarAListaDeProdutosNoCarrinhoText().should("contain", "Sauce Labs Backpack");
+        produtosElements.visualizarAListaDeProdutosNoCarrinhoText().should("contain", "Sauce Labs Bike Light");
+    }
 }
 
 export default new ProdutosActions();
