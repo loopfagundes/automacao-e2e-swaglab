@@ -53,3 +53,11 @@ Then("clico no botão de remover todos os produtos do carrinho", () => {
 Then("o carrinho deve estar vazio", () => {
     produtosActions.validarSeProdutoFoiRemovidoDoCarrinho();
 });
+
+Then("clico no botão de checkout", () => {
+    produtosActions.clicarCheckout();
+});
+
+Then("devo ser redirecionado para a página de checkout", () => {
+    produtosActions.validarPaginaCheckout();
+});

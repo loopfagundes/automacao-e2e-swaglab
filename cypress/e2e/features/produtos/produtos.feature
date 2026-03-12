@@ -39,10 +39,11 @@ Funcionalidade: Produtos
         E clico no botão de remover todos os produtos do carrinho
         Então o carrinho deve estar vazio
 
-    # Cenário: Adiciona produto ao carrinho ate checkout
-    #     Dado que estou na página de produtos
-    #     Quando seleciono um produto
-    #     E clico no botão de adicionar ao carrinho
-    #     E visualizo o carrinho
-    #     E clico no botão de checkout
-    #     Então devo ser redirecionado para a página de checkout
+    Cenário: Adiciona produto ao carrinho ate checkout
+        Dado que estou na página de produtos
+        Quando seleciono um produto "backpack"
+        E visualizo os detalhes do produto
+        E clico no botão de adicionar ao carrinho
+        E devo visualizar o produto no carrinho
+        E clico no botão de checkout
+        Então devo ser redirecionado para a página de checkout

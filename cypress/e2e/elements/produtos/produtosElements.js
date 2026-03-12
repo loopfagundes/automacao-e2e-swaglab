@@ -42,6 +42,10 @@ class ProdutosElements {
   visualizarAListaDeProdutosNoCarrinhoText() {
     return cy.get('[data-test="cart-list"]');
   }
+
+  checkoutButton() {
+    return cy.get('[data-test="checkout"]');
+  }
 }
 
 export default new ProdutosElements();

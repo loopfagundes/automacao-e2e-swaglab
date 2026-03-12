@@ -52,6 +52,15 @@ class ProdutosActions {
             cy.wrap($btn).click();
         });
     }
+
+    clicarCheckout() {
+        produtosElements.checkoutButton().click();
+    }
+
+    validarPaginaCheckout() {
+        cy.url().should("include", "/checkout-step-one.html");
+        produtosElements.validarOTitulo().should("contain", "Checkout: Your Information");
+    }
 }
 
 export default new ProdutosActions();
