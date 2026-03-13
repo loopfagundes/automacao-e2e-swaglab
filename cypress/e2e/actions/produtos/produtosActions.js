@@ -4,7 +4,7 @@ class ProdutosActions {
 
     acessarPaginaProdutos() {
         cy.url().should("include", "/inventory.html");
-        produtosElements.validarOTitulo().should("contain", "Products");
+        produtosElements.tituloDaPaginaText().should("contain", "Products");
     }
 
     selecionarProduto(nomeProduto) {
@@ -59,7 +59,7 @@ class ProdutosActions {
 
     validarPaginaCheckout() {
         cy.url().should("include", "/checkout-step-one.html");
-        produtosElements.validarOTitulo().should("contain", "Checkout: Your Information");
+        produtosElements.tituloDaPaginaText().should("contain", "Checkout: Your Information");
     }
 }
 
