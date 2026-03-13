@@ -1,6 +1,7 @@
 # language: pt
 
 Funcionalidade: Login
+  Como um usuário do sistema
 
   Cenário: Login com sucesso
     Dado que estou na página de login

@@ -1,5 +1,5 @@
 class ProdutosElements {
-  validarOTitulo() {
+  tituloDaPaginaText() {
     return cy.get(".title");
   }
 

@@ -18,7 +18,7 @@ class LoginActions {
 
   validarLoginComSucesso() {
     cy.url().should("include", "/inventory.html");
-    produtosElements.validarOTitulo().should("contain", "Products");
+    produtosElements.tituloDaPaginaText().should("contain", "Products");
   }
 
   validarErroLogin() {
