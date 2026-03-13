@@ -18,7 +18,10 @@
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
     "@cucumber/cucumber": "^12.7.0",
     "@faker-js/faker": "^10.3.0",
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.38.0",
     "allure-cypress": "^3.6.0",
+    "cypress": "^15.11.0",
     "cypress-on-fix": "^1.1.0",
     "esbuild": "^0.27.3"
   }
