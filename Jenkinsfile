@@ -40,12 +40,6 @@ pipeline {
   post {
     always {
       archiveArtifacts artifacts: 'cypress/screenshots/**/*, cypress/videos/**/*, allure-results/**/*', allowEmptyArchive: true
-
-      allure([
-        includeProperties: false,
-        jdk: '',
-        results: [[path: 'allure-results']]
-      ])
     }
   }
 }
