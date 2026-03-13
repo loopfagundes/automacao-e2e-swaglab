@@ -13,6 +13,7 @@ pipeline {
 
   environment {
     CI = 'true'
+    NO_COLOR = '1'
   }
 
   stages {
