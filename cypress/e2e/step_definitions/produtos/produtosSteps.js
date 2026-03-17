@@ -26,8 +26,12 @@ Then("clico no botão de adicionar ao carrinho", () => {
     produtosActions.adicionarProdutoAoCarrinho();
 });
 
+Then("o ícone do carrinho deve exibir {string}", (quantidadeEsperada) => {
+    produtosActions.validarQuantidadeNoCarrinho(quantidadeEsperada);
+});
+
 Then("devo visualizar o produto no carrinho", () => {
-    produtosActions.visualizarCarrinho();
+    produtosActions.validarSeOsProdutosNoCarrinho();
 });
 
 Then("clico no botão de remover produto", () => {
