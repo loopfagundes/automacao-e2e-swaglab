@@ -14,6 +14,7 @@ Funcionalidade: Fluxo de Compra
         E seleciono um produto "backpack"
         E visualizo os detalhes do produto
         E clico no botão de adicionar ao carrinho
+        E o ícone do carrinho deve exibir "1"
         E devo visualizar o produto no carrinho
         E clico no botão de checkout
         E preencho as informações de checkout com dados válidos
