@@ -2,5 +2,21 @@
     "backpack": {
         "nome": "Sauce Labs Backpack",
         "preco": "$29.99"
+    },
+    "bikelight": {
+        "nome": "Sauce Labs Bike Light",
+        "preco": "$9.99"
+    },
+    "boltshirt": {
+        "nome": "Sauce Labs Bolt T-Shirt",
+        "preco": "$15.99"
+    },
+    "fleecejacket": {
+        "nome": "Sauce Labs Fleece Jacket",
+        "preco": "$49.99"
+    },
+    "theallthethings": {
+        "nome": "Test.allTheThings() T-Shirt (Red)",
+        "preco": "$15.99"
     }
 }

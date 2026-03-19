@@ -19,7 +19,7 @@ build/
 
 # Cypress artifacts
 cypress/screenshots/
-#cypress/videos/
+cypress/videos/
 
 # Reports 
 allure-results/
