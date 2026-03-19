@@ -18,8 +18,8 @@ build/
 .cache/
 
 # Cypress artifacts
-#cypress/screenshots/
-#cypress/videos/
+cypress/screenshots/
+cypress/videos/
 
 # Reports 
 allure-results/

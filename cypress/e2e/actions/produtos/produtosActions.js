@@ -21,7 +21,11 @@ class ProdutosActions {
         produtosElements.adicionarProdutoAoCarrinhoButton().click();
     }
 
-    visualizarCarrinho() {
+    validarQuantidadeNoCarrinho(quantidadeEsperada) {
+        produtosElements.iconeCarrinhoBadge().should("be.visible").and("contain", quantidadeEsperada);
+    }
+
+    validarSeOsProdutosNoCarrinho() {
         produtosElements.iconeCarrinhoButton().click();
         produtosElements.visualizarProdutoNoCarrinhoLabel().should("contain", "Sauce Labs Backpack");
     }

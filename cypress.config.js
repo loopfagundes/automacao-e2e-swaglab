@@ -8,7 +8,6 @@ const {
 } = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 const { allureCypress } = require("allure-cypress/reporter");
 const cypressOnFix = require("cypress-on-fix");
-const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 async function setupNodeEvents(on, config) {
   on = cypressOnFix(on);
@@ -22,7 +21,6 @@ async function setupNodeEvents(on, config) {
     })
   );
 
-  allureWriter(on, config);
   allureCypress(on, config);
   return config;
 }
@@ -35,6 +33,7 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     viewportHeight: 1080,
     screenshotOnRunFailure: true,
+    video: true,
     baseUrl: "https://www.saucedemo.com",
   },
 });

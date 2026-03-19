@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf cypress/screenshots cypress/videos allure-results",
+    "cy:run": "npm run clean && cypress run",
     "cy:open": "cypress open",
-    "cy:run": "cypress run",
     "allure:clean": "rimraf allure-results allure-report",
-    "allure:open": "allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report",
-    "allure:report": "rimraf allure-results allure-report && cypress run && allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
+    "allure:open": "allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
     "allure-cypress": "^3.6.0",
     "cypress": "^15.11.0",
     "cypress-on-fix": "^1.1.0",
-    "esbuild": "^0.27.3"
+    "esbuild": "^0.27.3",
+    "rimraf": "^6.1.3"
   }
 }
