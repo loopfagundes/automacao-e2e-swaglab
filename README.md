@@ -176,5 +176,5 @@ npx allure generate ./allure-results -o ./allure-report --clean && allure open .
 Esse comando serve para transformar os dados brutos de execução dos seus testes em um relatório visual (HTML) e abri-lo automaticamente no navegador
 
 ### Evidência
-![Report](assets/img/allure.png) 
+![Report](assets/img/allure-reports.png) 
 
