@@ -39,11 +39,18 @@ Funcionalidade: Produtos
         E clico no botão de remover todos os produtos do carrinho
         Então o carrinho deve estar vazio
 
+    Cenário: Exibir contador no carrinho ao adicionar produto
+        Dado que estou na página de produtos
+        Quando seleciono um produto "backpack"
+        E clico no botão de adicionar ao carrinho
+        Então o ícone do carrinho deve exibir "1"
+
     Cenário: Adiciona produto ao carrinho ate checkout
         Dado que estou na página de produtos
         Quando seleciono um produto "backpack"
         E visualizo os detalhes do produto
         E clico no botão de adicionar ao carrinho
+        E o ícone do carrinho deve exibir "1"
         E devo visualizar o produto no carrinho
         E clico no botão de checkout
         Então devo ser redirecionado para a página de checkout

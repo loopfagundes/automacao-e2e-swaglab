@@ -19,6 +19,10 @@ class ProdutosElements {
     return cy.get('[data-test="add-to-cart"]');
   }
 
+  iconeCarrinhoBadge() {
+    return cy.get('[data-test="shopping-cart-badge"]');
+  }
+
   iconeCarrinhoButton() {
     return cy.get('[data-test="shopping-cart-link"]');
   }
