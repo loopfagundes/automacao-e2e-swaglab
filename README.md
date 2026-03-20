@@ -16,6 +16,7 @@ Este projeto demonstra uma arquitetura profissional de automação com separaç�
 * Jenkins (Multibranch Pipeline)
 * Page Object Model
 * JSON para massa de dados
+* Allure Report
 
 ---
 ### Features
