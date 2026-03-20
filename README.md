@@ -115,6 +115,8 @@ npx cypress open
 npx cypress run
 ```
 
+**NOTA:** *Às vezes, ao rodar os testes, eles não passam por causa de problemas de performance é necessário medir o tempo de carregamento.*
+
 ---
 
 # 🐳 Execução com Docker
