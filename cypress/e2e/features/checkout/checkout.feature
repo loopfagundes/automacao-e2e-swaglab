@@ -16,6 +16,11 @@ Funcionalidade: Checkout
         E devo visualizar o produto no carrinho
         Então clico no botão de checkout
 
+    Cenário: Validar a mensagem de erro ao tentar finalizar compra sem preencher os campos obrigatórios
+        Dado que estou na página de Checkout Your Information 
+        Quando clico no botão de continuar
+        Então devo visualizar a mensagem de erro "Error: First Name is required"
+
     Cenário: Finaliza compra com sucesso
         Dado que estou na página de Checkout Your Information 
         Quando preencho as informações de checkout com dados válidos
