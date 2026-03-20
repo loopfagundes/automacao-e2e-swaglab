@@ -1,4 +1,4 @@
-class problematicoElements {
+class ProblematicoElements {
 
     produtosImagens() {
         return cy.get('.inventory_item_img img');
@@ -33,4 +33,4 @@ class problematicoElements {
     }
 }
 
-export default new problematicoElements();
+export default new ProblematicoElements();

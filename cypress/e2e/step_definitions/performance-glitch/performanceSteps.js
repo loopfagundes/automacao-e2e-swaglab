@@ -1,4 +1,4 @@
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import { Then } from "@badeball/cypress-cucumber-preprocessor";
 import performanceActions from "../../actions/performance-glitch/performanceActions";
 
 Then("o tempo de carregamento deve ser menor que {string} ms", (tempoLimite) => {

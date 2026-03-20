@@ -1,6 +1,4 @@
-import { de } from "@faker-js/faker";
-
-class checkoutElements {
+class CheckoutElements {
     validarOTituloText() {
         return cy.get(".title");
     }
@@ -46,4 +44,4 @@ class checkoutElements {
     }
 }
 
-export default new checkoutElements();
+export default new CheckoutElements();
