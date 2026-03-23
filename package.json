@@ -1,6 +1,7 @@
 {
-  "name": "automacao-e2e-swaglab",
+  "name": "automacao-e2e-swaglabs",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {

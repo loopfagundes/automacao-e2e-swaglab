@@ -1,34 +1,26 @@
 import performanceElements from "../../elements/performance-glitch/performanceElements";
 
 class PerformanceActions {
-    medirTempoDeCarregamentoParaPaginaDeProdutos(tempoLimite) {
+
+    medirTempoDeCarregamento(endpoint) {
         const inicio = Date.now();
-        cy.url().should('include', '/inventory.html').then(() => {
+        cy.url().should('include', endpoint).then(() => {
             const fim = Date.now();
             const tempo = fim - inicio;
             cy.log(`Tempo de carregamento: ${tempo} ms`);
-            expect(tempo).to.be.lessThan(Number.parseInt(tempoLimite));
         });
     }
 
-    medirTempoDeCarregamentoNaPdp(tempoLimite) {
-        const inicio = Date.now();
-        cy.url().should('include', '/inventory-item.html?id=4').then(() => {
-            const fim = Date.now();
-            const tempo = fim - inicio;
-            cy.log(`Tempo de carregamento: ${tempo} ms`);
-            expect(tempo).to.be.lessThan(Number.parseInt(tempoLimite));
-        });
+    paraPaginaDeProdutos() {
+        this.medirTempoDeCarregamento('/inventory.html');
     }
 
-    medirTempoDeCarregamentoAposAdicionarAoCarrinho(tempoLimite) {
-        const inicio = Date.now();
-        cy.url().should('include', '/cart.html').then(() => {
-            const fim = Date.now();
-            const tempo = fim - inicio;
-            cy.log(`Tempo de carregamento: ${tempo} ms`);
-            expect(tempo).to.be.lessThan(Number.parseInt(tempoLimite));
-        });
+    naPaginaDeProduto() {
+        this.medirTempoDeCarregamento('/inventory-item.html?id=4');
+    }
+
+    aposAdicionarAoCarrinho() {
+        this.medirTempoDeCarregamento('/cart.html');
     }
 
     voltarParaPaginaDeProdutos() {

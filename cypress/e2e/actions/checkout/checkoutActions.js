@@ -40,8 +40,6 @@ class CheckoutActions {
         checkoutElements.tresListrasMenuButton().click();
         checkoutElements.logoutMenuButton().click();
     }
-
-
 }
 
 export default new CheckoutActions();
