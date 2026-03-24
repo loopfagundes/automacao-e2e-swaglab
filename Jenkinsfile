@@ -7,6 +7,7 @@ pipeline {
   }
 
   parameters {
+    choice(name: 'BROWSER', choices: ['chrome', 'edge', 'electron', 'firefox'], description: 'Browser para rodar nos testes')
     string(name: 'CUCUMBER_TAG', defaultValue: '@regressivo', description: 'Tags do Cucumber. Ex: @regressivo or @smoke')
   }
 
@@ -37,8 +38,8 @@ pipeline {
 
     stage('Run Cypress') {
       steps {
-        echo "Executando testes com a tag: ${params.CUCUMBER_TAG}"
-        sh 'npx cypress run --browser chrome --env tags="${CUCUMBER_TAG}"'
+        echo "Executando testes: BROWSER: ${params.BROWSER} e CUCUMBER_TAG: ${params.CUCUMBER_TAG}"
+        sh "npx cypress run --browser ${params.BROWSER} --env tags=${params.CUCUMBER_TAG}"
       }
     }
   }
