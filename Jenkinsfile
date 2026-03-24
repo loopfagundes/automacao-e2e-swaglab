@@ -6,6 +6,10 @@ pipeline {
     }
   }
 
+  parameters {
+    string(name: 'CUCUMBER_TAG', defaultValue: '@regressivo', description: 'Tags do Cucumber. Ex: @Regressivo or @Smoke')
+  }
+
   options {
     timestamps()
     disableConcurrentBuilds()
@@ -33,7 +37,7 @@ pipeline {
 
     stage('Run Cypress') {
       steps {
-        sh 'npx cypress run --browser electron'
+        sh 'npx cypress run --browser electron --env tags="${CUCUMBER_TAG}"'
       }
     }
   }
