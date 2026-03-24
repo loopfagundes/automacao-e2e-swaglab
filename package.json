@@ -1,19 +1,32 @@
 {
-  "name": "automacao-e2e-swaglab",
+  "name": "automacao-e2e-swaglabs",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf cypress/screenshots cypress/videos allure-results allure-report",
+    "cy:run": "npm run clean && cypress run",
+    "cy:open": "cypress open",
+    "allure:clean": "rimraf allure-results allure-report",
+    "allure:open": "allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report",
+    "test:regressivo": "npm run clean && cypress run --env tags=@regressivo",
+    "test:smoke": "npm run clean && cypress run --env tags=@smoke"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "@cucumber/cucumber": "^12.7.0",
+    "@faker-js/faker": "^10.3.0",
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.38.0",
+    "allure-cypress": "^3.6.0",
     "cypress": "^15.11.0",
-    "esbuild": "^0.27.3"
+    "cypress-on-fix": "^1.1.0",
+    "esbuild": "^0.27.3",
+    "rimraf": "^6.1.3"
   }
 }

@@ -18,11 +18,12 @@ build/
 .cache/
 
 # Cypress artifacts
-#cypress/screenshots/
-#cypress/videos/
+cypress/screenshots/
+cypress/videos/
 
 # Reports 
-#reports/*.pdf
+allure-results/
+allure-report/
 
 # (opcional) se não quiser versionar o html:
 # reports/*.html
