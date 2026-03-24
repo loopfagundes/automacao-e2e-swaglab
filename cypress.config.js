@@ -29,4 +29,7 @@ export default defineConfig({
     video: true,
     baseUrl: "https://www.saucedemo.com",
   },
+  env: {
+    tags: "@regressivo"
+  }
 });

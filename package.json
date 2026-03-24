@@ -5,11 +5,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf cypress/screenshots cypress/videos allure-results",
+    "clean": "rimraf cypress/screenshots cypress/videos allure-results allure-report",
     "cy:run": "npm run clean && cypress run",
     "cy:open": "cypress open",
     "allure:clean": "rimraf allure-results allure-report",
-    "allure:open": "allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
+    "allure:open": "allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report",
+    "test:regressivo": "npm run clean && cypress run --env tags=@regressivo",
+    "test:smoke": "npm run clean && cypress run --env tags=@smoke"
   },
   "keywords": [],
   "author": "",
