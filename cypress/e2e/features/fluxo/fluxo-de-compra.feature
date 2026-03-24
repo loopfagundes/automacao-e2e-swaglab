@@ -1,5 +1,8 @@
 # language: pt
 
+@regressivo
+@fluxoDeCompra
+@smoke
 Funcionalidade: Fluxo de Compra
   Como um usuário autenticado
   Quero realizar uma compra completa

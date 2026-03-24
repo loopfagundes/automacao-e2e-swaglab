@@ -1,5 +1,8 @@
 # language: pt
 
+@regressivo
+@usuarioProblematico
+@smoke
 Funcionalidade: Comportamento do usuário problemático
   Como um usuário autenticado
   Quero verificar o comportamento do usuário problemático
@@ -11,15 +14,18 @@ Funcionalidade: Comportamento do usuário problemático
       E clico no botão de login
       Então devo visualizar a página de produtos
 
+    @usuarioProblematico_001
     Cenário: Deve exibir imagens incorretas 
       Dado que estou na página de produtos
       Então devo visualizar os produtos com imagens incorretas
 
+    @usuarioProblematico_002
     Cenário: Detalhes incorretos do produto
       Dado que estou na página de produtos
       Quando selecionar um produto "bikelight"
       Então devo visualizar o produto "bikelight" incorretamente como "boltshirt"
     
+    @usuarioProblematico_003
     Cenário: Não atualiza contador do carrinho 
       Dado que estou na página de produtos
       Quando selecionar um produto "bikelight"
@@ -27,11 +33,13 @@ Funcionalidade: Comportamento do usuário problemático
       E o botão de adicionar ao carrinho habilitado
       Então o ícone do carrinho não deve exibir quantidade
     
+    @usuarioProblematico_004
     Cenário: Detalhes do item não encontrado 
       Dado que estou na página de produtos
       Quando selecionar um produto "fleecejacket"
       Então devo visualizar "ITEM NOT FOUND" na página de detalhes do produto
     
+    @usuarioProblematico_005
     Cenário: Campo de primeiro nome deve ser alterado incorretamente ao preencher sobrenome
       Dado que estou na página de produtos
       Quando selecionar um produto "theallthethings"
