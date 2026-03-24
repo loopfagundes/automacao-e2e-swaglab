@@ -24,7 +24,6 @@ Este projeto demonstra uma arquitetura profissional de automação com separaç�
 Contém os cenários escritos em **BDD (Gherkin)**.
 
 Exemplo:
-
 ```gherkin
 Cenário: Adiciona produto ao carrinho
   Dado que estou na página de produtos
@@ -41,7 +40,6 @@ O projeto utiliza uma divisão de responsabilidades:
 ### elements
 
 Contém apenas **seletores da página**.
-
 ```
 nomeProdutoLabel() {
   return cy.get('[data-test="inventory-item-name"]')
@@ -51,7 +49,6 @@ nomeProdutoLabel() {
 ### actions
 
 Contém **ações reutilizáveis** executadas nos testes.
-
 ```
 selecionarProduto(nomeProduto) {
   produtosElements.nomeProdutoLabel()
@@ -63,7 +60,6 @@ selecionarProduto(nomeProduto) {
 ### steps
 
 Contém a implementação dos passos do **Cucumber**.
-
 ```
 When("seleciono um produto {string}", (produtoKey) => {
   const nomeProduto = produtos[produtoKey].nome
@@ -74,7 +70,6 @@ When("seleciono um produto {string}", (produtoKey) => {
 ### fixtures
 
 Contém **massa de dados em JSON**.
-
 ```
 {
   "backpack": {
@@ -89,13 +84,11 @@ Contém **massa de dados em JSON**.
 # 🧩 Instalação do projeto
 
 ### 1️⃣ Clonar repositório
-
 ```
 git clone https://github.com/loopfagundes/automacao-e2e-swaglab.git
 ```
 
 ### 2️⃣ Instalar dependências
-
 ```
 npm install
 ```
@@ -105,18 +98,65 @@ npm install
 # ⚙️ Executar testes
 
 ### Modo interativo (Cypress UI - E2E Testing)
-
 ```
 npx cypress open
 ```
 
 ### Modo headless
-
 ```
 npx cypress run
 ```
 
 **NOTA:** *Às vezes, ao rodar os testes, eles não passam por causa de problemas de performance é necessário medir o tempo de carregamento.*
+
+---
+
+# 🏷️ Tags
+
+O projeto utiliza tags para organizar e filtrar a execução dos testes.
+
+### Tags disponíveis
+
+| Tag | Descrição |
+|---|---|
+| `@smoke` | Fluxos críticos, execução rápida |
+| `@regressivo` | Todos os cenários completos |
+
+### Como usar no `.feature`
+```gherkin
+@smoke
+Scenario: Login com sucesso
+  Dado que acesso a página de login
+  Quando preencho as credenciais válidas
+  Então devo ser redirecionado para o inventário
+```
+
+### Executar por tag
+```
+npm run test:smoke
+```
+```
+npm run test:regressivo
+```
+
+Ou diretamente pelo Cypress:
+```
+npx cypress run --env tags=@smoke
+```
+```
+npx cypress run --env tags=@regressivo
+```
+
+### Combinar tags
+```
+npx cypress run --env tags="@smoke and @login"
+```
+```
+npx cypress run --env tags="@smoke or @regressivo"
+```
+```
+npx cypress run --env tags="not @smoke"
+```
 
 ---
 
@@ -133,13 +173,11 @@ npx cypress run
 # 🧪 Pipeline Jenkins
 
 ### Container
-
 ```
 jenkins
 ```
 
 ### Comando:
-
 ```
 docker start jenkins
 
@@ -149,7 +187,6 @@ docker stop jenkins
 O projeto utiliza **Jenkins Multibranch Pipeline** com execução dentro de container Docker.
 
 Fluxo do pipeline:
-
 ```
 Checkout código
      ↓
@@ -165,17 +202,14 @@ Publicar artefatos
 # 📊 Allure Report
 
 Comando: 
-
 ```
 npx rimraf allure-results allure-report
 ```
 É utilizado para excluir os resultados e relatórios anteriores dos testes Allure antes de executar um novo conjunto de testes.
-
 ```
 npx allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report
 ```
 Esse comando serve para transformar os dados brutos de execução dos seus testes em um relatório visual (HTML) e abri-lo automaticamente no navegador
 
 ### Evidência
-![Report](assets/img/allure-reports.png) 
-
+![Report](assets/img/allure-reports.png)
