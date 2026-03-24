@@ -11,8 +11,6 @@ Projeto de automação de testes End‑to‑End utilizando **Cypress + Cucumber 
 
 Este projeto demonstra uma arquitetura profissional de automação com separação de responsabilidades, massa de dados externa e execução contínua em pipeline.
 
-[![Build Status](https://psychometrically-securable-hollie.ngrok-free.dev/job/automacao-e2e-swaglabs/job/develop/badge/icon?style=flat-square&subject=Jenkins+build+status)](https://psychometrically-securable-hollie.ngrok-free.dev/job/automacao-e2e-swaglabs/job/develop/)
-
 ---
 
 # 📌 Tecnologias utilizadas
@@ -249,6 +247,45 @@ O pipeline aceita parâmetros para customizar a execução dos testes diretament
 
 ---
 
+# 🌐 Ngrok
+
+O projeto utiliza o **Ngrok** para expor o Jenkins local publicamente, permitindo acessar o pipeline de qualquer lugar via URL temporária.
+
+### Instalação
+
+1. Acesse [ngrok.com](https://ngrok.com) e crie uma conta gratuita
+2. Baixe e instale o Ngrok
+3. Autentique com o token da sua conta:
+```
+ngrok config add-authtoken SEU_TOKEN_AQUI
+```
+
+### Expor o Jenkins
+
+O Jenkins roda na porta `8080` por padrão:
+```
+ngrok http 8080
+```
+
+O Ngrok vai gerar uma URL pública:
+```
+Forwarding  https://abc123.ngrok-free.dev -> http://localhost:8080
+```
+
+### Acessar o Jenkins remotamente
+```
+https://abc123.ngrok-free.dev
+```
+
+> ⚠️ **Atenção:** No plano gratuito a URL muda a cada reinício do Ngrok. Mantenha o terminal aberto enquanto estiver utilizando.
+
+| Limitação | Detalhe |
+|---|---|
+| URL temporária | Muda a cada reinício |
+| 1 túnel simultâneo | Apenas um serviço exposto |
+| Sessão ativa | Terminal deve permanecer aberto |
+
+---
 # 📊 Allure Report
 
 Comando: 
