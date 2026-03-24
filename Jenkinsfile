@@ -7,7 +7,7 @@ pipeline {
   }
 
   parameters {
-    choice(name: 'BROWSER', choices: ['chrome', 'edge', 'electron', 'firefox'], defaultValue: 'electron', description: 'Browser para rodar nos testes')
+    choice(name: 'BROWSER', choices: ['chrome', 'edge', 'electron', 'firefox'], description: 'Browser para rodar nos testes')
     string(name: 'CUCUMBER_TAG', defaultValue: '@regressivo', description: 'Tags do Cucumber. Ex: @regressivo or @smoke')
   }
 
