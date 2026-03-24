@@ -7,7 +7,7 @@ pipeline {
   }
 
   parameters {
-    string(name: 'CUCUMBER_TAG', defaultValue: '@regressivo', description: 'Tags do Cucumber. Ex: @Regressivo or @Smoke')
+    string(name: 'CUCUMBER_TAG', defaultValue: '@Regressivo', description: 'Tags do Cucumber. Ex: @Regressivo or @Smoke')
   }
 
   options {
@@ -37,7 +37,8 @@ pipeline {
 
     stage('Run Cypress') {
       steps {
-        sh 'npx cypress run --browser electron --env tags="${CUCUMBER_TAG}"'
+        echo "Executando testes com a tag: ${params.CUCUMBER_TAG}"
+        sh 'npx cypress run --browser chrome --env tags="${CUCUMBER_TAG}"'
       }
     }
   }
