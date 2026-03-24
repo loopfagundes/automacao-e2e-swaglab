@@ -7,7 +7,7 @@ pipeline {
   }
 
   parameters {
-    string(name: 'CUCUMBER_TAG', defaultValue: '@regressivo', description: 'Tags do Cucumber. Ex: @Regressivo or @Smoke')
+    string(name: 'CUCUMBER_TAG', defaultValue: '@regressivo', description: 'Tags do Cucumber. Ex: @regressivo or @smoke')
   }
 
   options {
