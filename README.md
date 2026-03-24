@@ -124,11 +124,22 @@ O projeto utiliza tags para organizar e filtrar a execução dos testes.
 
 ### Como usar no `.feature`
 ```gherkin
+@regressivo
+@performance
 @smoke
-Scenario: Login com sucesso
-  Dado que acesso a página de login
-  Quando preencho as credenciais válidas
-  Então devo ser redirecionado para o inventário
+Funcionalidade: Comportamento do usuário com performance glitch
+  Como um usuário autenticado
+  Quero verificar o comportamento do usuário com performance glitch
+  Para entender as limitações e peculiaridades desse tipo de usuário
+
+    Contexto: Login com usuário com performance glitch
+        Dado que estou na página de login
+        Quando faço login com usuário performance glitch
+        Então clico no botão de login
+
+    @performance_001
+    Cenário: Validar tempo de carregamento no login
+        Então o tempo de carregamento deve ser menor que "40" ms
 ```
 
 ### Executar por tag
