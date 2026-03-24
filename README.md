@@ -11,6 +11,8 @@ Projeto de automação de testes End‑to‑End utilizando **Cypress + Cucumber 
 
 Este projeto demonstra uma arquitetura profissional de automação com separação de responsabilidades, massa de dados externa e execução contínua em pipeline.
 
+![Jenkins](https://psychometrically-securable-hollie.ngrok-free.app/job/automacao-e2e-swaglabs/job/develop/badge/icon)
+
 ---
 
 # 📌 Tecnologias utilizadas
