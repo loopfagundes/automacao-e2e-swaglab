@@ -122,6 +122,8 @@ O projeto utiliza tags para organizar e filtrar a execução dos testes.
 | `@smoke` | Fluxos críticos, execução rápida |
 | `@regressivo` | Todos os cenários completos |
 
+> 💡 As demais tags disponíveis estão nos arquivos `.feature` do projeto.
+
 ### Como usar no `.feature`
 ```gherkin
 @regressivo
@@ -207,6 +209,34 @@ Executar testes Cypress
      ↓
 Publicar artefatos
 ```
+
+### Parâmetros do pipeline
+
+O pipeline aceita parâmetros para customizar a execução dos testes diretamente pelo Jenkins.
+
+| Parâmetro | Tipo | Default | Descrição |
+|---|---|---|---|
+| `CUCUMBER_TAG` | string | `@regressivo` | Tag do Cucumber para filtrar os testes |
+| `BROWSER` | choice | `chrome` | Browser para rodar os testes |
+
+### Como executar com parâmetros?
+
+1. Acesse o job no Jenkins
+2. Clique na branch desejada para executar
+3. Clique em **"Build with Parameters"** ou **"Construir com parâmetros"**
+4. Selecione o browser desejado
+5. Informe a tag desejada
+6. Clique em **"Build"** ou **"Construir"**
+
+### Exemplos de tags
+```
+@smoke        → executa apenas os fluxos críticos
+@regressivo   → executa todos os cenários
+@login        → executa apenas os cenários de login
+@performance  → executa apenas os cenários de performance
+```
+
+> 💡 As demais tags disponíveis estão nos arquivos `.feature` do projeto.
 
 ---
 
